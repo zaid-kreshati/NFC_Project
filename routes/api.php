@@ -1,27 +1,16 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\NFCController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\InvoiceController;
 
 
-
-Route::get('/user', function (Request $request) {
-    return $request->user();
-})->middleware('auth:sanctum');
-
-Route::get('/test', function () {
-    return response()->json(['message' => 'welcome']);
+Route::controller(AuthController::class)->group(function () {
+    Route::post('/register', 'register');
+    Route::post('/login', 'login');
+    Route::post('/logout', 'logout')->middleware('auth:sanctum');
+    Route::delete('/delete_account', 'deleteAccount')->middleware('auth:sanctum');
 });
-
-Route::get('/claim', [NFCController::class, 'claim']);
-Route::post('/register', [AuthController::class, 'register']);
-Route::post('/login', [AuthController::class, 'login']);
-Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:sanctum');
-
-
 
 Route::middleware('auth:sanctum')->controller(InvoiceController::class)->group(function () {
 

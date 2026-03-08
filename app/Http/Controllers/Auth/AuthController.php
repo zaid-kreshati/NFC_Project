@@ -54,4 +54,15 @@ class AuthController extends Controller
             return $this->error($e->getMessage());
         }
     }
+
+    public function deleteAccount(Request $request): JsonResponse
+    {
+        try {
+            $user = $request->user();
+            $user->delete();
+            return $this->success([], 'Account deleted successfully');
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
+    }
 }

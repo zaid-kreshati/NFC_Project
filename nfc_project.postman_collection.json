@@ -1,0 +1,1074 @@
+{
+  "info": {
+    "_postman_id": "2fbf30e4-cf18-46cb-a101-7040ed99284c",
+    "name": "nfc_project",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "24473018"
+  },
+  "item": [
+    {
+      "name": "Auth Client",
+      "item": [
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "email",
+                  "value": "zaid@gmail.com",
+                  "type": "default"
+                },
+                {
+                  "key": "password",
+                  "value": "password",
+                  "type": "default"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/login",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "register",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "zaid",
+                  "type": "default"
+                },
+                {
+                  "key": "email",
+                  "value": "zaid@gmail.com",
+                  "type": "default"
+                },
+                {
+                  "key": "password",
+                  "value": "password",
+                  "type": "default"
+                },
+                {
+                  "key": "role",
+                  "value": "customer",
+                  "type": "default"
+                },
+                {
+                  "key": "",
+                  "value": "",
+                  "type": "default",
+                  "disabled": true
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/register",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "register",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": [
+                    {
+                      "key": "name",
+                      "value": "Noor",
+                      "type": "default"
+                    },
+                    {
+                      "key": "email",
+                      "value": "noor@client.com",
+                      "type": "default"
+                    },
+                    {
+                      "key": "password",
+                      "value": "password",
+                      "type": "default"
+                    },
+                    {
+                      "key": "device_token",
+                      "value": "dfgvfdghdshdsfffgrgertg56465434FCM",
+                      "type": "default"
+                    },
+                    {
+                      "key": "city_id",
+                      "value": "1",
+                      "type": "default"
+                    }
+                  ]
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/client/register",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "client",
+                    "register"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Aug 2024 15:13:17 GMT"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 15 Aug 2024 15:13:17 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.1.10"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "X-RateLimit-Limit",
+                  "value": "60"
+                },
+                {
+                  "key": "X-RateLimit-Remaining",
+                  "value": "59"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"name\": \"Noor\",\n        \"email\": \"noor@client.com\",\n        \"device_token\": \"dfgvfdghdshdsfffgrgertg56465434FCM\",\n        \"city_id\": \"1\",\n        \"updated_at\": \"2024-08-15T15:13:17.000000Z\",\n        \"created_at\": \"2024-08-15T15:13:17.000000Z\",\n        \"id\": 5,\n        \"token\": \"2|wyncmyUuehlwnSz7EVPvSOkR9SUjXGHjbILLhyBU03b2e35d\",\n        \"roles\": [\n            {\n                \"id\": 2,\n                \"name\": \"client\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:55.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:55.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"role_id\": 2\n                }\n            }\n        ],\n        \"permissions\": [\n            {\n                \"id\": 9,\n                \"name\": \"appointments.view\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"permission_id\": 9\n                }\n            },\n            {\n                \"id\": 10,\n                \"name\": \"search\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"permission_id\": 10\n                }\n            },\n            {\n                \"id\": 11,\n                \"name\": \"rate\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"permission_id\": 11\n                }\n            },\n            {\n                \"id\": 12,\n                \"name\": \"appointments.create\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"permission_id\": 12\n                }\n            },\n            {\n                \"id\": 13,\n                \"name\": \"appointments.delete\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"permission_id\": 13\n                }\n            },\n            {\n                \"id\": 14,\n                \"name\": \"emergency.create\",\n                \"guard_name\": \"web\",\n                \"created_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"updated_at\": \"2024-08-15T15:04:56.000000Z\",\n                \"pivot\": {\n                    \"model_type\": \"App\\\\Models\\\\User\",\n                    \"model_id\": 5,\n                    \"permission_id\": 14\n                }\n            }\n        ]\n    },\n    \"message\": \" created successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "logout",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "4|cTd2wcpjQaBY5PXftVD03tWNxhHkaZisi1yPWyEq0930d1e3",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/logout",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "logout"
+              ],
+              "query": [
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text",
+                  "disabled": true
+                },
+                {
+                  "key": "",
+                  "value": null,
+                  "type": "text",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteAccount",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{client}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/delete_account",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "delete_account"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Invoices",
+      "item": [
+        {
+          "name": "create invoice",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{client}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"store_id\": 1,\n    \"branch_id\": 1,\n    \"subtotal\": 150.50,\n    \"tax\": 15.05,\n    \"total\": 165.55,\n    \"payment_method\": \"cash\",\n    \"currency\": \"EUR\",\n    \"status\": \"pending\",\n    \"invoice_items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 2,\n            \"unit_price\": 25.00,\n            \"total\": 50.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 3,\n            \"unit_price\": 30.00,\n            \"total\": 90.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 1,\n            \"unit_price\": 10.50,\n            \"total\": 10.50\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "create invoice",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"store_id\": 1,\n    \"branch_id\": 1,\n    \"subtotal\": 150.50,\n    \"tax\": 15.05,\n    \"total\": 165.55,\n    \"payment_method\": \"cash\",\n    \"currency\": \"EUR\",\n    \"status\": \"pending\",\n    \"invoice_items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 2,\n            \"unit_price\": 25.00,\n            \"total\": 50.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 3,\n            \"unit_price\": 30.00,\n            \"total\": 90.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 1,\n            \"unit_price\": 10.50,\n            \"total\": 10.50\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 12:18:16 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": {\n        \"uuid\": \"40f44f50-cb83-4883-b5ec-0d11a8ce28e2\",\n        \"store_id\": 1,\n        \"store_name\": \"Main Electronics Store\",\n        \"branch_id\": 1,\n        \"subtotal\": 150.5,\n        \"tax\": 15.05,\n        \"total\": 165.55,\n        \"payment_method\": \"cash\",\n        \"currency\": \"EUR\",\n        \"status\": \"pending\",\n        \"pos_timestamp\": \"2026-03-05 12:18:16\",\n        \"updated_at\": \"2026-03-05 12:18:16\",\n        \"created_at\": \"2026-03-05 12:18:16\",\n        \"id\": 23,\n        \"items\": [\n            {\n                \"id\": 91,\n                \"invoice_id\": 23,\n                \"product_id\": 1,\n                \"quantity\": 2,\n                \"unit_price\": \"25.00\",\n                \"total\": \"50.00\",\n                \"created_at\": \"2026-03-05 12:18:16\",\n                \"updated_at\": \"2026-03-05 12:18:16\",\n                \"product_name\": \"NFC Smart Tag\",\n                \"product\": {\n                    \"id\": 1,\n                    \"store_id\": 1,\n                    \"name\": \"NFC Smart Tag\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 92,\n                \"invoice_id\": 23,\n                \"product_id\": 2,\n                \"quantity\": 3,\n                \"unit_price\": \"30.00\",\n                \"total\": \"90.00\",\n                \"created_at\": \"2026-03-05 12:18:16\",\n                \"updated_at\": \"2026-03-05 12:18:16\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 93,\n                \"invoice_id\": 23,\n                \"product_id\": 2,\n                \"quantity\": 1,\n                \"unit_price\": \"10.50\",\n                \"total\": \"10.50\",\n                \"created_at\": \"2026-03-05 12:18:16\",\n                \"updated_at\": \"2026-03-05 12:18:16\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            }\n        ],\n        \"branch\": {\n            \"id\": 1,\n            \"store_id\": 1,\n            \"name\": \"Downtown Branch 1\",\n            \"created_at\": \"2026-03-05T12:09:59.000000Z\",\n            \"updated_at\": \"2026-03-05T12:09:59.000000Z\"\n        },\n        \"store\": {\n            \"id\": 1,\n            \"name\": \"Main Electronics Store\",\n            \"created_at\": \"2026-03-05T12:09:59.000000Z\",\n            \"updated_at\": \"2026-03-05T12:09:59.000000Z\"\n        }\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "get invoice by uuid",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{client}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices/90281170-6c72-46ff-85c2-32bf6d253351",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices",
+                "90281170-6c72-46ff-85c2-32bf6d253351"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get invoice by uuid",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices/90281170-6c72-46ff-85c2-32bf6d253351",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices",
+                    "90281170-6c72-46ff-85c2-32bf6d253351"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 12:16:29 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": {\n        \"id\": 22,\n        \"uuid\": \"90281170-6c72-46ff-85c2-32bf6d253351\",\n        \"external_invoice_id\": null,\n        \"user_id\": null,\n        \"store_id\": 1,\n        \"store_name\": \"Main Electronics Store\",\n        \"branch_id\": 1,\n        \"pos_timestamp\": \"2026-03-05 12:15:47\",\n        \"subtotal\": \"150.50\",\n        \"tax\": \"15.05\",\n        \"total\": \"165.55\",\n        \"payment_method\": \"cash\",\n        \"currency\": \"EUR\",\n        \"status\": \"pending\",\n        \"created_at\": \"2026-03-05 12:15:47\",\n        \"updated_at\": \"2026-03-05 12:15:47\",\n        \"items\": [\n            {\n                \"id\": 88,\n                \"invoice_id\": 22,\n                \"product_id\": 1,\n                \"quantity\": 2,\n                \"unit_price\": \"25.00\",\n                \"total\": \"50.00\",\n                \"created_at\": \"2026-03-05 12:15:47\",\n                \"updated_at\": \"2026-03-05 12:15:47\",\n                \"product_name\": \"NFC Smart Tag\",\n                \"product\": {\n                    \"id\": 1,\n                    \"store_id\": 1,\n                    \"name\": \"NFC Smart Tag\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 89,\n                \"invoice_id\": 22,\n                \"product_id\": 2,\n                \"quantity\": 3,\n                \"unit_price\": \"30.00\",\n                \"total\": \"90.00\",\n                \"created_at\": \"2026-03-05 12:15:47\",\n                \"updated_at\": \"2026-03-05 12:15:47\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 90,\n                \"invoice_id\": 22,\n                \"product_id\": 2,\n                \"quantity\": 1,\n                \"unit_price\": \"10.50\",\n                \"total\": \"10.50\",\n                \"created_at\": \"2026-03-05 12:15:47\",\n                \"updated_at\": \"2026-03-05 12:15:47\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "all invoice by token",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{client}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices/my",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices",
+                "my"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "all invoice by token",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices/my",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices",
+                    "my"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 12:18:33 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": [\n        {\n            \"id\": 23,\n            \"uuid\": \"40f44f50-cb83-4883-b5ec-0d11a8ce28e2\",\n            \"external_invoice_id\": null,\n            \"user_id\": 2,\n            \"store_id\": 1,\n            \"store_name\": \"Main Electronics Store\",\n            \"branch_id\": 1,\n            \"pos_timestamp\": \"2026-03-05 12:18:16\",\n            \"subtotal\": \"150.50\",\n            \"tax\": \"15.05\",\n            \"total\": \"165.55\",\n            \"payment_method\": \"cash\",\n            \"currency\": \"EUR\",\n            \"status\": \"registered\",\n            \"created_at\": \"2026-03-05 12:18:16\",\n            \"updated_at\": \"2026-03-05 12:18:29\",\n            \"items\": [\n                {\n                    \"id\": 91,\n                    \"invoice_id\": 23,\n                    \"product_id\": 1,\n                    \"quantity\": 2,\n                    \"unit_price\": \"25.00\",\n                    \"total\": \"50.00\",\n                    \"created_at\": \"2026-03-05 12:18:16\",\n                    \"updated_at\": \"2026-03-05 12:18:16\",\n                    \"product_name\": \"NFC Smart Tag\",\n                    \"product\": {\n                        \"id\": 1,\n                        \"store_id\": 1,\n                        \"name\": \"NFC Smart Tag\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 92,\n                    \"invoice_id\": 23,\n                    \"product_id\": 2,\n                    \"quantity\": 3,\n                    \"unit_price\": \"30.00\",\n                    \"total\": \"90.00\",\n                    \"created_at\": \"2026-03-05 12:18:16\",\n                    \"updated_at\": \"2026-03-05 12:18:16\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 93,\n                    \"invoice_id\": 23,\n                    \"product_id\": 2,\n                    \"quantity\": 1,\n                    \"unit_price\": \"10.50\",\n                    \"total\": \"10.50\",\n                    \"created_at\": \"2026-03-05 12:18:16\",\n                    \"updated_at\": \"2026-03-05 12:18:16\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "all invoice by user id",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices/user/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices",
+                "user",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "all invoice by user id",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices/user/1",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices",
+                    "user",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 12:14:10 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"95ae72e1-c4ec-4861-84d8-134a4f6c2807\",\n            \"external_invoice_id\": \"POS-05025\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2025-09-11 23:58:59\",\n            \"subtotal\": \"13449.00\",\n            \"tax\": \"1344.90\",\n            \"total\": \"14793.90\",\n            \"payment_method\": \"Debit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 1,\n                    \"invoice_id\": 1,\n                    \"product_id\": 8,\n                    \"quantity\": 1,\n                    \"unit_price\": \"986.00\",\n                    \"total\": \"986.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 2,\n                    \"invoice_id\": 1,\n                    \"product_id\": 2,\n                    \"quantity\": 2,\n                    \"unit_price\": \"478.00\",\n                    \"total\": \"956.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 3,\n                    \"invoice_id\": 1,\n                    \"product_id\": 3,\n                    \"quantity\": 2,\n                    \"unit_price\": \"235.00\",\n                    \"total\": \"470.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 4,\n                    \"invoice_id\": 1,\n                    \"product_id\": 8,\n                    \"quantity\": 4,\n                    \"unit_price\": \"393.00\",\n                    \"total\": \"1572.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 5,\n                    \"invoice_id\": 1,\n                    \"product_id\": 3,\n                    \"quantity\": 3,\n                    \"unit_price\": \"874.00\",\n                    \"total\": \"2622.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 6,\n                    \"invoice_id\": 1,\n                    \"product_id\": 3,\n                    \"quantity\": 2,\n                    \"unit_price\": \"988.00\",\n                    \"total\": \"1976.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 7,\n                    \"invoice_id\": 1,\n                    \"product_id\": 4,\n                    \"quantity\": 5,\n                    \"unit_price\": \"503.00\",\n                    \"total\": \"2515.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 8,\n                    \"invoice_id\": 1,\n                    \"product_id\": 3,\n                    \"quantity\": 3,\n                    \"unit_price\": \"784.00\",\n                    \"total\": \"2352.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"0374cc1d-62eb-4ff3-90cd-05f2834d5f5f\",\n            \"external_invoice_id\": \"POS-90646\",\n            \"user_id\": 1,\n            \"store_id\": 5,\n            \"store_name\": \"Circuit Central\",\n            \"branch_id\": 4,\n            \"pos_timestamp\": \"2025-06-21 08:36:59\",\n            \"subtotal\": \"2214.00\",\n            \"tax\": \"221.40\",\n            \"total\": \"2435.40\",\n            \"payment_method\": \"Cash\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 9,\n                    \"invoice_id\": 2,\n                    \"product_id\": 6,\n                    \"quantity\": 4,\n                    \"unit_price\": \"77.00\",\n                    \"total\": \"308.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"USB-C Hub\",\n                    \"product\": {\n                        \"id\": 6,\n                        \"store_id\": 3,\n                        \"name\": \"USB-C Hub\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 10,\n                    \"invoice_id\": 2,\n                    \"product_id\": 4,\n                    \"quantity\": 2,\n                    \"unit_price\": \"502.00\",\n                    \"total\": \"1004.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 11,\n                    \"invoice_id\": 2,\n                    \"product_id\": 4,\n                    \"quantity\": 2,\n                    \"unit_price\": \"451.00\",\n                    \"total\": \"902.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"uuid\": \"3d8508a6-7f24-4b8c-82e1-5b0e943f4710\",\n            \"external_invoice_id\": \"POS-10495\",\n            \"user_id\": 1,\n            \"store_id\": 2,\n            \"store_name\": \"Gadget Galaxy\",\n            \"branch_id\": 1,\n            \"pos_timestamp\": \"2025-09-13 18:29:59\",\n            \"subtotal\": \"297.00\",\n            \"tax\": \"29.70\",\n            \"total\": \"326.70\",\n            \"payment_method\": \"Credit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 12,\n                    \"invoice_id\": 3,\n                    \"product_id\": 3,\n                    \"quantity\": 1,\n                    \"unit_price\": \"297.00\",\n                    \"total\": \"297.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 4,\n            \"uuid\": \"79381240-61c2-43bf-96df-7ff1cb9347cb\",\n            \"external_invoice_id\": \"POS-02144\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 4,\n            \"pos_timestamp\": \"2026-02-22 17:08:59\",\n            \"subtotal\": \"11685.00\",\n            \"tax\": \"1168.50\",\n            \"total\": \"12853.50\",\n            \"payment_method\": \"Bank Transfer\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 13,\n                    \"invoice_id\": 4,\n                    \"product_id\": 7,\n                    \"quantity\": 2,\n                    \"unit_price\": \"847.00\",\n                    \"total\": \"1694.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"LED Strip Lights\",\n                    \"product\": {\n                        \"id\": 7,\n                        \"store_id\": 4,\n                        \"name\": \"LED Strip Lights\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 14,\n                    \"invoice_id\": 4,\n                    \"product_id\": 3,\n                    \"quantity\": 4,\n                    \"unit_price\": \"313.00\",\n                    \"total\": \"1252.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 15,\n                    \"invoice_id\": 4,\n                    \"product_id\": 3,\n                    \"quantity\": 4,\n                    \"unit_price\": \"675.00\",\n                    \"total\": \"2700.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 16,\n                    \"invoice_id\": 4,\n                    \"product_id\": 4,\n                    \"quantity\": 1,\n                    \"unit_price\": \"800.00\",\n                    \"total\": \"800.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 17,\n                    \"invoice_id\": 4,\n                    \"product_id\": 3,\n                    \"quantity\": 2,\n                    \"unit_price\": \"325.00\",\n                    \"total\": \"650.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 18,\n                    \"invoice_id\": 4,\n                    \"product_id\": 3,\n                    \"quantity\": 5,\n                    \"unit_price\": \"669.00\",\n                    \"total\": \"3345.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 19,\n                    \"invoice_id\": 4,\n                    \"product_id\": 4,\n                    \"quantity\": 4,\n                    \"unit_price\": \"311.00\",\n                    \"total\": \"1244.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 5,\n            \"uuid\": \"c284274e-f1a5-4391-8bd8-41d27cb97d2a\",\n            \"external_invoice_id\": \"POS-39816\",\n            \"user_id\": 1,\n            \"store_id\": 5,\n            \"store_name\": \"Circuit Central\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2025-08-03 08:56:59\",\n            \"subtotal\": \"5955.00\",\n            \"tax\": \"595.50\",\n            \"total\": \"6550.50\",\n            \"payment_method\": \"Debit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 20,\n                    \"invoice_id\": 5,\n                    \"product_id\": 10,\n                    \"quantity\": 4,\n                    \"unit_price\": \"395.00\",\n                    \"total\": \"1580.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 21,\n                    \"invoice_id\": 5,\n                    \"product_id\": 5,\n                    \"quantity\": 5,\n                    \"unit_price\": \"135.00\",\n                    \"total\": \"675.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 22,\n                    \"invoice_id\": 5,\n                    \"product_id\": 10,\n                    \"quantity\": 4,\n                    \"unit_price\": \"925.00\",\n                    \"total\": \"3700.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 6,\n            \"uuid\": \"44b1aae1-a925-411f-811d-fdbb5980052b\",\n            \"external_invoice_id\": \"POS-17320\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2026-01-04 02:28:59\",\n            \"subtotal\": \"324.00\",\n            \"tax\": \"32.40\",\n            \"total\": \"356.40\",\n            \"payment_method\": \"PayPal\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 23,\n                    \"invoice_id\": 6,\n                    \"product_id\": 9,\n                    \"quantity\": 4,\n                    \"unit_price\": \"81.00\",\n                    \"total\": \"324.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wi-Fi Extender\",\n                    \"product\": {\n                        \"id\": 9,\n                        \"store_id\": 5,\n                        \"name\": \"Wi-Fi Extender\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 7,\n            \"uuid\": \"df1262b8-5731-4c6c-87aa-438b7253e493\",\n            \"external_invoice_id\": \"POS-18336\",\n            \"user_id\": 1,\n            \"store_id\": 2,\n            \"store_name\": \"Gadget Galaxy\",\n            \"branch_id\": 4,\n            \"pos_timestamp\": \"2026-01-12 09:48:59\",\n            \"subtotal\": \"12472.00\",\n            \"tax\": \"1247.20\",\n            \"total\": \"13719.20\",\n            \"payment_method\": \"PayPal\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 24,\n                    \"invoice_id\": 7,\n                    \"product_id\": 2,\n                    \"quantity\": 3,\n                    \"unit_price\": \"619.00\",\n                    \"total\": \"1857.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 25,\n                    \"invoice_id\": 7,\n                    \"product_id\": 5,\n                    \"quantity\": 5,\n                    \"unit_price\": \"558.00\",\n                    \"total\": \"2790.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 26,\n                    \"invoice_id\": 7,\n                    \"product_id\": 3,\n                    \"quantity\": 2,\n                    \"unit_price\": \"266.00\",\n                    \"total\": \"532.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 27,\n                    \"invoice_id\": 7,\n                    \"product_id\": 5,\n                    \"quantity\": 4,\n                    \"unit_price\": \"779.00\",\n                    \"total\": \"3116.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 28,\n                    \"invoice_id\": 7,\n                    \"product_id\": 1,\n                    \"quantity\": 4,\n                    \"unit_price\": \"410.00\",\n                    \"total\": \"1640.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"NFC Smart Tag\",\n                    \"product\": {\n                        \"id\": 1,\n                        \"store_id\": 1,\n                        \"name\": \"NFC Smart Tag\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 29,\n                    \"invoice_id\": 7,\n                    \"product_id\": 1,\n                    \"quantity\": 5,\n                    \"unit_price\": \"371.00\",\n                    \"total\": \"1855.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"NFC Smart Tag\",\n                    \"product\": {\n                        \"id\": 1,\n                        \"store_id\": 1,\n                        \"name\": \"NFC Smart Tag\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 30,\n                    \"invoice_id\": 7,\n                    \"product_id\": 10,\n                    \"quantity\": 2,\n                    \"unit_price\": \"341.00\",\n                    \"total\": \"682.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 8,\n            \"uuid\": \"bfcb640b-5f37-4c14-801e-84e8e7e1e3f5\",\n            \"external_invoice_id\": \"POS-60148\",\n            \"user_id\": 1,\n            \"store_id\": 2,\n            \"store_name\": \"Gadget Galaxy\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2026-02-03 01:09:59\",\n            \"subtotal\": \"3190.00\",\n            \"tax\": \"319.00\",\n            \"total\": \"3509.00\",\n            \"payment_method\": \"Debit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"registered\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 31,\n                    \"invoice_id\": 8,\n                    \"product_id\": 7,\n                    \"quantity\": 5,\n                    \"unit_price\": \"638.00\",\n                    \"total\": \"3190.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"LED Strip Lights\",\n                    \"product\": {\n                        \"id\": 7,\n                        \"store_id\": 4,\n                        \"name\": \"LED Strip Lights\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 9,\n            \"uuid\": \"7f0d7661-b003-4d75-9a97-476bc39f8780\",\n            \"external_invoice_id\": \"POS-24679\",\n            \"user_id\": 1,\n            \"store_id\": 2,\n            \"store_name\": \"Gadget Galaxy\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2026-01-03 09:51:59\",\n            \"subtotal\": \"4619.00\",\n            \"tax\": \"461.90\",\n            \"total\": \"5080.90\",\n            \"payment_method\": \"Cash\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 32,\n                    \"invoice_id\": 9,\n                    \"product_id\": 2,\n                    \"quantity\": 2,\n                    \"unit_price\": \"608.00\",\n                    \"total\": \"1216.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 33,\n                    \"invoice_id\": 9,\n                    \"product_id\": 1,\n                    \"quantity\": 4,\n                    \"unit_price\": \"774.00\",\n                    \"total\": \"3096.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"NFC Smart Tag\",\n                    \"product\": {\n                        \"id\": 1,\n                        \"store_id\": 1,\n                        \"name\": \"NFC Smart Tag\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 34,\n                    \"invoice_id\": 9,\n                    \"product_id\": 2,\n                    \"quantity\": 1,\n                    \"unit_price\": \"276.00\",\n                    \"total\": \"276.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 35,\n                    \"invoice_id\": 9,\n                    \"product_id\": 3,\n                    \"quantity\": 1,\n                    \"unit_price\": \"31.00\",\n                    \"total\": \"31.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 10,\n            \"uuid\": \"77a71100-e9e8-4d6b-9c07-a155006a75c1\",\n            \"external_invoice_id\": \"POS-71099\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 2,\n            \"pos_timestamp\": \"2025-07-25 19:27:59\",\n            \"subtotal\": \"11741.00\",\n            \"tax\": \"1174.10\",\n            \"total\": \"12915.10\",\n            \"payment_method\": \"Debit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 36,\n                    \"invoice_id\": 10,\n                    \"product_id\": 10,\n                    \"quantity\": 4,\n                    \"unit_price\": \"870.00\",\n                    \"total\": \"3480.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 37,\n                    \"invoice_id\": 10,\n                    \"product_id\": 8,\n                    \"quantity\": 4,\n                    \"unit_price\": \"369.00\",\n                    \"total\": \"1476.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 38,\n                    \"invoice_id\": 10,\n                    \"product_id\": 2,\n                    \"quantity\": 5,\n                    \"unit_price\": \"409.00\",\n                    \"total\": \"2045.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 39,\n                    \"invoice_id\": 10,\n                    \"product_id\": 9,\n                    \"quantity\": 5,\n                    \"unit_price\": \"688.00\",\n                    \"total\": \"3440.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wi-Fi Extender\",\n                    \"product\": {\n                        \"id\": 9,\n                        \"store_id\": 5,\n                        \"name\": \"Wi-Fi Extender\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 40,\n                    \"invoice_id\": 10,\n                    \"product_id\": 8,\n                    \"quantity\": 4,\n                    \"unit_price\": \"211.00\",\n                    \"total\": \"844.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 41,\n                    \"invoice_id\": 10,\n                    \"product_id\": 3,\n                    \"quantity\": 3,\n                    \"unit_price\": \"152.00\",\n                    \"total\": \"456.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 11,\n            \"uuid\": \"4e6b4ffe-4ecd-4140-9b50-a64136fab8f2\",\n            \"external_invoice_id\": \"POS-88108\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2025-11-17 00:21:59\",\n            \"subtotal\": \"1848.00\",\n            \"tax\": \"184.80\",\n            \"total\": \"2032.80\",\n            \"payment_method\": \"Bank Transfer\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 42,\n                    \"invoice_id\": 11,\n                    \"product_id\": 4,\n                    \"quantity\": 3,\n                    \"unit_price\": \"152.00\",\n                    \"total\": \"456.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 43,\n                    \"invoice_id\": 11,\n                    \"product_id\": 7,\n                    \"quantity\": 3,\n                    \"unit_price\": \"418.00\",\n                    \"total\": \"1254.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"LED Strip Lights\",\n                    \"product\": {\n                        \"id\": 7,\n                        \"store_id\": 4,\n                        \"name\": \"LED Strip Lights\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 44,\n                    \"invoice_id\": 11,\n                    \"product_id\": 10,\n                    \"quantity\": 2,\n                    \"unit_price\": \"69.00\",\n                    \"total\": \"138.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 12,\n            \"uuid\": \"85ec63aa-8ad1-4749-ab17-12ac695a2eb2\",\n            \"external_invoice_id\": \"POS-03770\",\n            \"user_id\": 1,\n            \"store_id\": 3,\n            \"store_name\": \"Tech Haven\",\n            \"branch_id\": 1,\n            \"pos_timestamp\": \"2026-02-05 14:29:59\",\n            \"subtotal\": \"1949.00\",\n            \"tax\": \"194.90\",\n            \"total\": \"2143.90\",\n            \"payment_method\": \"PayPal\",\n            \"currency\": \"EUR\",\n            \"status\": \"registered\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 45,\n                    \"invoice_id\": 12,\n                    \"product_id\": 5,\n                    \"quantity\": 2,\n                    \"unit_price\": \"66.00\",\n                    \"total\": \"132.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 46,\n                    \"invoice_id\": 12,\n                    \"product_id\": 9,\n                    \"quantity\": 4,\n                    \"unit_price\": \"99.00\",\n                    \"total\": \"396.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wi-Fi Extender\",\n                    \"product\": {\n                        \"id\": 9,\n                        \"store_id\": 5,\n                        \"name\": \"Wi-Fi Extender\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 47,\n                    \"invoice_id\": 12,\n                    \"product_id\": 8,\n                    \"quantity\": 3,\n                    \"unit_price\": \"276.00\",\n                    \"total\": \"828.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 48,\n                    \"invoice_id\": 12,\n                    \"product_id\": 6,\n                    \"quantity\": 1,\n                    \"unit_price\": \"593.00\",\n                    \"total\": \"593.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"USB-C Hub\",\n                    \"product\": {\n                        \"id\": 6,\n                        \"store_id\": 3,\n                        \"name\": \"USB-C Hub\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 13,\n            \"uuid\": \"ece3c888-ca13-4a1e-bcd4-77c392f6299d\",\n            \"external_invoice_id\": \"POS-01191\",\n            \"user_id\": 1,\n            \"store_id\": 1,\n            \"store_name\": \"Main Electronics Store\",\n            \"branch_id\": 2,\n            \"pos_timestamp\": \"2025-10-04 16:21:59\",\n            \"subtotal\": \"10419.00\",\n            \"tax\": \"1041.90\",\n            \"total\": \"11460.90\",\n            \"payment_method\": \"Credit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 49,\n                    \"invoice_id\": 13,\n                    \"product_id\": 9,\n                    \"quantity\": 2,\n                    \"unit_price\": \"891.00\",\n                    \"total\": \"1782.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wi-Fi Extender\",\n                    \"product\": {\n                        \"id\": 9,\n                        \"store_id\": 5,\n                        \"name\": \"Wi-Fi Extender\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 50,\n                    \"invoice_id\": 13,\n                    \"product_id\": 5,\n                    \"quantity\": 5,\n                    \"unit_price\": \"400.00\",\n                    \"total\": \"2000.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 51,\n                    \"invoice_id\": 13,\n                    \"product_id\": 3,\n                    \"quantity\": 5,\n                    \"unit_price\": \"604.00\",\n                    \"total\": \"3020.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 52,\n                    \"invoice_id\": 13,\n                    \"product_id\": 5,\n                    \"quantity\": 3,\n                    \"unit_price\": \"729.00\",\n                    \"total\": \"2187.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 53,\n                    \"invoice_id\": 13,\n                    \"product_id\": 6,\n                    \"quantity\": 5,\n                    \"unit_price\": \"286.00\",\n                    \"total\": \"1430.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"USB-C Hub\",\n                    \"product\": {\n                        \"id\": 6,\n                        \"store_id\": 3,\n                        \"name\": \"USB-C Hub\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 14,\n            \"uuid\": \"a6298f80-0589-4e20-89a2-c102758c9005\",\n            \"external_invoice_id\": \"POS-81913\",\n            \"user_id\": 1,\n            \"store_id\": 5,\n            \"store_name\": \"Circuit Central\",\n            \"branch_id\": 1,\n            \"pos_timestamp\": \"2025-09-13 23:36:59\",\n            \"subtotal\": \"7191.00\",\n            \"tax\": \"719.10\",\n            \"total\": \"7910.10\",\n            \"payment_method\": \"Cash\",\n            \"currency\": \"EUR\",\n            \"status\": \"cancelled\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 54,\n                    \"invoice_id\": 14,\n                    \"product_id\": 7,\n                    \"quantity\": 3,\n                    \"unit_price\": \"780.00\",\n                    \"total\": \"2340.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"LED Strip Lights\",\n                    \"product\": {\n                        \"id\": 7,\n                        \"store_id\": 4,\n                        \"name\": \"LED Strip Lights\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 55,\n                    \"invoice_id\": 14,\n                    \"product_id\": 5,\n                    \"quantity\": 4,\n                    \"unit_price\": \"681.00\",\n                    \"total\": \"2724.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 56,\n                    \"invoice_id\": 14,\n                    \"product_id\": 8,\n                    \"quantity\": 3,\n                    \"unit_price\": \"709.00\",\n                    \"total\": \"2127.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 15,\n            \"uuid\": \"73cda355-0f61-408a-abdf-761b2e098068\",\n            \"external_invoice_id\": \"POS-21737\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 5,\n            \"pos_timestamp\": \"2025-06-11 21:07:59\",\n            \"subtotal\": \"6324.00\",\n            \"tax\": \"632.40\",\n            \"total\": \"6956.40\",\n            \"payment_method\": \"Credit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"registered\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 57,\n                    \"invoice_id\": 15,\n                    \"product_id\": 10,\n                    \"quantity\": 1,\n                    \"unit_price\": \"938.00\",\n                    \"total\": \"938.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 58,\n                    \"invoice_id\": 15,\n                    \"product_id\": 4,\n                    \"quantity\": 1,\n                    \"unit_price\": \"811.00\",\n                    \"total\": \"811.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 59,\n                    \"invoice_id\": 15,\n                    \"product_id\": 3,\n                    \"quantity\": 4,\n                    \"unit_price\": \"539.00\",\n                    \"total\": \"2156.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 60,\n                    \"invoice_id\": 15,\n                    \"product_id\": 5,\n                    \"quantity\": 1,\n                    \"unit_price\": \"881.00\",\n                    \"total\": \"881.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 61,\n                    \"invoice_id\": 15,\n                    \"product_id\": 2,\n                    \"quantity\": 2,\n                    \"unit_price\": \"659.00\",\n                    \"total\": \"1318.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 62,\n                    \"invoice_id\": 15,\n                    \"product_id\": 6,\n                    \"quantity\": 1,\n                    \"unit_price\": \"220.00\",\n                    \"total\": \"220.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"USB-C Hub\",\n                    \"product\": {\n                        \"id\": 6,\n                        \"store_id\": 3,\n                        \"name\": \"USB-C Hub\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 16,\n            \"uuid\": \"166a7714-78a0-4140-98a3-f4ac75a7ba44\",\n            \"external_invoice_id\": \"POS-81155\",\n            \"user_id\": 1,\n            \"store_id\": 1,\n            \"store_name\": \"Main Electronics Store\",\n            \"branch_id\": 1,\n            \"pos_timestamp\": \"2026-02-23 01:41:59\",\n            \"subtotal\": \"11382.00\",\n            \"tax\": \"1138.20\",\n            \"total\": \"12520.20\",\n            \"payment_method\": \"Cash\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 63,\n                    \"invoice_id\": 16,\n                    \"product_id\": 10,\n                    \"quantity\": 2,\n                    \"unit_price\": \"46.00\",\n                    \"total\": \"92.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 64,\n                    \"invoice_id\": 16,\n                    \"product_id\": 3,\n                    \"quantity\": 3,\n                    \"unit_price\": \"801.00\",\n                    \"total\": \"2403.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 65,\n                    \"invoice_id\": 16,\n                    \"product_id\": 2,\n                    \"quantity\": 1,\n                    \"unit_price\": \"740.00\",\n                    \"total\": \"740.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 66,\n                    \"invoice_id\": 16,\n                    \"product_id\": 8,\n                    \"quantity\": 4,\n                    \"unit_price\": \"51.00\",\n                    \"total\": \"204.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 67,\n                    \"invoice_id\": 16,\n                    \"product_id\": 6,\n                    \"quantity\": 1,\n                    \"unit_price\": \"157.00\",\n                    \"total\": \"157.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"USB-C Hub\",\n                    \"product\": {\n                        \"id\": 6,\n                        \"store_id\": 3,\n                        \"name\": \"USB-C Hub\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 68,\n                    \"invoice_id\": 16,\n                    \"product_id\": 3,\n                    \"quantity\": 3,\n                    \"unit_price\": \"621.00\",\n                    \"total\": \"1863.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 69,\n                    \"invoice_id\": 16,\n                    \"product_id\": 3,\n                    \"quantity\": 2,\n                    \"unit_price\": \"884.00\",\n                    \"total\": \"1768.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 70,\n                    \"invoice_id\": 16,\n                    \"product_id\": 4,\n                    \"quantity\": 5,\n                    \"unit_price\": \"831.00\",\n                    \"total\": \"4155.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 17,\n            \"uuid\": \"48ff13b7-433b-4a08-b049-7be1817413aa\",\n            \"external_invoice_id\": \"POS-98692\",\n            \"user_id\": 1,\n            \"store_id\": 4,\n            \"store_name\": \"Digital Dreams\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2025-09-05 12:50:59\",\n            \"subtotal\": \"412.00\",\n            \"tax\": \"41.20\",\n            \"total\": \"453.20\",\n            \"payment_method\": \"Bank Transfer\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 71,\n                    \"invoice_id\": 17,\n                    \"product_id\": 2,\n                    \"quantity\": 2,\n                    \"unit_price\": \"56.00\",\n                    \"total\": \"112.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Digital Reader\",\n                    \"product\": {\n                        \"id\": 2,\n                        \"store_id\": 1,\n                        \"name\": \"Digital Reader\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 72,\n                    \"invoice_id\": 17,\n                    \"product_id\": 9,\n                    \"quantity\": 4,\n                    \"unit_price\": \"75.00\",\n                    \"total\": \"300.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wi-Fi Extender\",\n                    \"product\": {\n                        \"id\": 9,\n                        \"store_id\": 5,\n                        \"name\": \"Wi-Fi Extender\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 18,\n            \"uuid\": \"6642cc3e-b1d0-41bf-ba49-5f2285987e3e\",\n            \"external_invoice_id\": \"POS-16361\",\n            \"user_id\": 1,\n            \"store_id\": 5,\n            \"store_name\": \"Circuit Central\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2025-04-01 05:04:59\",\n            \"subtotal\": \"3814.00\",\n            \"tax\": \"381.40\",\n            \"total\": \"4195.40\",\n            \"payment_method\": \"Credit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"registered\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 73,\n                    \"invoice_id\": 18,\n                    \"product_id\": 4,\n                    \"quantity\": 3,\n                    \"unit_price\": \"932.00\",\n                    \"total\": \"2796.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 74,\n                    \"invoice_id\": 18,\n                    \"product_id\": 8,\n                    \"quantity\": 2,\n                    \"unit_price\": \"509.00\",\n                    \"total\": \"1018.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 19,\n            \"uuid\": \"d2f163ef-3226-4625-8c19-089ace0872a8\",\n            \"external_invoice_id\": \"POS-91746\",\n            \"user_id\": 1,\n            \"store_id\": 2,\n            \"store_name\": \"Gadget Galaxy\",\n            \"branch_id\": 3,\n            \"pos_timestamp\": \"2025-05-19 06:06:59\",\n            \"subtotal\": \"8119.00\",\n            \"tax\": \"811.90\",\n            \"total\": \"8930.90\",\n            \"payment_method\": \"Debit Card\",\n            \"currency\": \"EUR\",\n            \"status\": \"send\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 75,\n                    \"invoice_id\": 19,\n                    \"product_id\": 5,\n                    \"quantity\": 3,\n                    \"unit_price\": \"499.00\",\n                    \"total\": \"1497.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Plug\",\n                    \"product\": {\n                        \"id\": 5,\n                        \"store_id\": 3,\n                        \"name\": \"Smart Plug\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 76,\n                    \"invoice_id\": 19,\n                    \"product_id\": 10,\n                    \"quantity\": 5,\n                    \"unit_price\": \"954.00\",\n                    \"total\": \"4770.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 77,\n                    \"invoice_id\": 19,\n                    \"product_id\": 10,\n                    \"quantity\": 4,\n                    \"unit_price\": \"463.00\",\n                    \"total\": \"1852.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        },\n        {\n            \"id\": 20,\n            \"uuid\": \"4f701d9f-d8a8-46e6-88ed-7c4ffd36ecdf\",\n            \"external_invoice_id\": \"POS-83329\",\n            \"user_id\": 1,\n            \"store_id\": 2,\n            \"store_name\": \"Gadget Galaxy\",\n            \"branch_id\": 5,\n            \"pos_timestamp\": \"2025-04-13 15:44:59\",\n            \"subtotal\": \"6290.00\",\n            \"tax\": \"629.00\",\n            \"total\": \"6919.00\",\n            \"payment_method\": \"Bank Transfer\",\n            \"currency\": \"EUR\",\n            \"status\": \"pending\",\n            \"created_at\": \"2026-03-05 12:09:59\",\n            \"updated_at\": \"2026-03-05 12:09:59\",\n            \"items\": [\n                {\n                    \"id\": 78,\n                    \"invoice_id\": 20,\n                    \"product_id\": 8,\n                    \"quantity\": 4,\n                    \"unit_price\": \"477.00\",\n                    \"total\": \"1908.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 79,\n                    \"invoice_id\": 20,\n                    \"product_id\": 8,\n                    \"quantity\": 1,\n                    \"unit_price\": \"485.00\",\n                    \"total\": \"485.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 80,\n                    \"invoice_id\": 20,\n                    \"product_id\": 10,\n                    \"quantity\": 1,\n                    \"unit_price\": \"11.00\",\n                    \"total\": \"11.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 81,\n                    \"invoice_id\": 20,\n                    \"product_id\": 10,\n                    \"quantity\": 3,\n                    \"unit_price\": \"174.00\",\n                    \"total\": \"522.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Power Bank\",\n                    \"product\": {\n                        \"id\": 10,\n                        \"store_id\": 5,\n                        \"name\": \"Power Bank\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 82,\n                    \"invoice_id\": 20,\n                    \"product_id\": 8,\n                    \"quantity\": 3,\n                    \"unit_price\": \"376.00\",\n                    \"total\": \"1128.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Smart Thermostat\",\n                    \"product\": {\n                        \"id\": 8,\n                        \"store_id\": 4,\n                        \"name\": \"Smart Thermostat\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 83,\n                    \"invoice_id\": 20,\n                    \"product_id\": 3,\n                    \"quantity\": 3,\n                    \"unit_price\": \"608.00\",\n                    \"total\": \"1824.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Bluetooth Tracker\",\n                    \"product\": {\n                        \"id\": 3,\n                        \"store_id\": 2,\n                        \"name\": \"Bluetooth Tracker\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                },\n                {\n                    \"id\": 84,\n                    \"invoice_id\": 20,\n                    \"product_id\": 4,\n                    \"quantity\": 1,\n                    \"unit_price\": \"412.00\",\n                    \"total\": \"412.00\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\",\n                    \"product_name\": \"Wireless Charger\",\n                    \"product\": {\n                        \"id\": 4,\n                        \"store_id\": 2,\n                        \"name\": \"Wireless Charger\",\n                        \"created_at\": \"2026-03-05 12:09:59\",\n                        \"updated_at\": \"2026-03-05 12:09:59\"\n                    }\n                }\n            ]\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "claim",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{client}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices/claim/a329eb7d-fd95-44f2-a524-9c62a7b99d7d",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices",
+                "claim",
+                "a329eb7d-fd95-44f2-a524-9c62a7b99d7d"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "claim",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "formdata",
+                  "formdata": []
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices/claim/a329eb7d-fd95-44f2-a524-9c62a7b99d7d",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices",
+                    "claim",
+                    "a329eb7d-fd95-44f2-a524-9c62a7b99d7d"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 17:03:21 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": {\n        \"id\": 24,\n        \"uuid\": \"a329eb7d-fd95-44f2-a524-9c62a7b99d7d\",\n        \"external_invoice_id\": null,\n        \"user_id\": 2,\n        \"store_id\": 1,\n        \"store_name\": \"Main Electronics Store\",\n        \"branch_id\": 1,\n        \"pos_timestamp\": \"2026-03-05 17:02:12\",\n        \"subtotal\": \"150.50\",\n        \"tax\": \"15.05\",\n        \"total\": \"165.55\",\n        \"payment_method\": \"cash\",\n        \"currency\": \"EUR\",\n        \"status\": \"registered\",\n        \"created_at\": \"2026-03-05 17:02:12\",\n        \"updated_at\": \"2026-03-05 17:03:21\",\n        \"items\": [\n            {\n                \"id\": 94,\n                \"invoice_id\": 24,\n                \"product_id\": 1,\n                \"quantity\": 2,\n                \"unit_price\": \"25.00\",\n                \"total\": \"50.00\",\n                \"created_at\": \"2026-03-05 17:02:12\",\n                \"updated_at\": \"2026-03-05 17:02:12\",\n                \"product_name\": \"NFC Smart Tag\",\n                \"product\": {\n                    \"id\": 1,\n                    \"store_id\": 1,\n                    \"name\": \"NFC Smart Tag\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 95,\n                \"invoice_id\": 24,\n                \"product_id\": 2,\n                \"quantity\": 3,\n                \"unit_price\": \"30.00\",\n                \"total\": \"90.00\",\n                \"created_at\": \"2026-03-05 17:02:12\",\n                \"updated_at\": \"2026-03-05 17:02:12\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 96,\n                \"invoice_id\": 24,\n                \"product_id\": 2,\n                \"quantity\": 1,\n                \"unit_price\": \"10.50\",\n                \"total\": \"10.50\",\n                \"created_at\": \"2026-03-05 17:02:12\",\n                \"updated_at\": \"2026-03-05 17:02:12\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "update invoice",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"store_id\": 1,\n    \"branch_id\": 1,\n    \"subtotal\": 1500.50,\n    \"tax\": 15.05,\n    \"total\": 165.55,\n    \"payment_method\": \"cash\",\n    \"currency\": \"EUR\",\n    \"status\": \"pending\",\n    \"invoice_items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 2,\n            \"unit_price\": 25.00,\n            \"total\": 50.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 3,\n            \"unit_price\": 30.00,\n            \"total\": 90.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 1,\n            \"unit_price\": 10.50,\n            \"total\": 10.50\n        }\n    ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update invoice",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"store_id\": 1,\n    \"branch_id\": 1,\n    \"subtotal\": 1500.50,\n    \"tax\": 15.05,\n    \"total\": 165.55,\n    \"payment_method\": \"cash\",\n    \"currency\": \"EUR\",\n    \"status\": \"pending\",\n    \"invoice_items\": [\n        {\n            \"product_id\": 1,\n            \"quantity\": 2,\n            \"unit_price\": 25.00,\n            \"total\": 50.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 3,\n            \"unit_price\": 30.00,\n            \"total\": 90.00\n        },\n        {\n            \"product_id\": 2,\n            \"quantity\": 1,\n            \"unit_price\": 10.50,\n            \"total\": 10.50\n        }\n    ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices/1",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 17:03:42 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": {\n        \"id\": 1,\n        \"uuid\": \"95ae72e1-c4ec-4861-84d8-134a4f6c2807\",\n        \"external_invoice_id\": \"POS-05025\",\n        \"user_id\": 1,\n        \"store_id\": 1,\n        \"store_name\": \"Digital Dreams\",\n        \"branch_id\": 1,\n        \"pos_timestamp\": \"2025-09-11 23:58:59\",\n        \"subtotal\": 1500.5,\n        \"tax\": 15.05,\n        \"total\": 165.55,\n        \"payment_method\": \"cash\",\n        \"currency\": \"EUR\",\n        \"status\": \"pending\",\n        \"created_at\": \"2026-03-05 12:09:59\",\n        \"updated_at\": \"2026-03-05 17:03:42\",\n        \"items\": [\n            {\n                \"id\": 1,\n                \"invoice_id\": 1,\n                \"product_id\": 8,\n                \"quantity\": 1,\n                \"unit_price\": \"986.00\",\n                \"total\": \"986.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Smart Thermostat\",\n                \"product\": {\n                    \"id\": 8,\n                    \"store_id\": 4,\n                    \"name\": \"Smart Thermostat\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 2,\n                \"invoice_id\": 1,\n                \"product_id\": 2,\n                \"quantity\": 2,\n                \"unit_price\": \"478.00\",\n                \"total\": \"956.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Digital Reader\",\n                \"product\": {\n                    \"id\": 2,\n                    \"store_id\": 1,\n                    \"name\": \"Digital Reader\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 3,\n                \"invoice_id\": 1,\n                \"product_id\": 3,\n                \"quantity\": 2,\n                \"unit_price\": \"235.00\",\n                \"total\": \"470.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Bluetooth Tracker\",\n                \"product\": {\n                    \"id\": 3,\n                    \"store_id\": 2,\n                    \"name\": \"Bluetooth Tracker\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 4,\n                \"invoice_id\": 1,\n                \"product_id\": 8,\n                \"quantity\": 4,\n                \"unit_price\": \"393.00\",\n                \"total\": \"1572.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Smart Thermostat\",\n                \"product\": {\n                    \"id\": 8,\n                    \"store_id\": 4,\n                    \"name\": \"Smart Thermostat\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 5,\n                \"invoice_id\": 1,\n                \"product_id\": 3,\n                \"quantity\": 3,\n                \"unit_price\": \"874.00\",\n                \"total\": \"2622.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Bluetooth Tracker\",\n                \"product\": {\n                    \"id\": 3,\n                    \"store_id\": 2,\n                    \"name\": \"Bluetooth Tracker\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 6,\n                \"invoice_id\": 1,\n                \"product_id\": 3,\n                \"quantity\": 2,\n                \"unit_price\": \"988.00\",\n                \"total\": \"1976.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Bluetooth Tracker\",\n                \"product\": {\n                    \"id\": 3,\n                    \"store_id\": 2,\n                    \"name\": \"Bluetooth Tracker\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 7,\n                \"invoice_id\": 1,\n                \"product_id\": 4,\n                \"quantity\": 5,\n                \"unit_price\": \"503.00\",\n                \"total\": \"2515.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Wireless Charger\",\n                \"product\": {\n                    \"id\": 4,\n                    \"store_id\": 2,\n                    \"name\": \"Wireless Charger\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            },\n            {\n                \"id\": 8,\n                \"invoice_id\": 1,\n                \"product_id\": 3,\n                \"quantity\": 3,\n                \"unit_price\": \"784.00\",\n                \"total\": \"2352.00\",\n                \"created_at\": \"2026-03-05 12:09:59\",\n                \"updated_at\": \"2026-03-05 12:09:59\",\n                \"product_name\": \"Bluetooth Tracker\",\n                \"product\": {\n                    \"id\": 3,\n                    \"store_id\": 2,\n                    \"name\": \"Bluetooth Tracker\",\n                    \"created_at\": \"2026-03-05 12:09:59\",\n                    \"updated_at\": \"2026-03-05 12:09:59\"\n                }\n            }\n        ]\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete invoice",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{admin}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/invoices/6",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "invoices",
+                "6"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "delete invoice",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://127.0.0.1:8000/api/invoices/6",
+                  "protocol": "http",
+                  "host": [
+                    "127",
+                    "0",
+                    "0",
+                    "1"
+                  ],
+                  "port": "8000",
+                  "path": [
+                    "api",
+                    "invoices",
+                    "6"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Host",
+                  "value": "127.0.0.1:8000"
+                },
+                {
+                  "key": "Connection",
+                  "value": "close"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.2.28"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 05 Mar 2026 11:40:00 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"message\": 201,\n    \"data\": {\n        \"message\": \"Deleted\"\n    }\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
