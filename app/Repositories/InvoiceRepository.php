@@ -2,7 +2,12 @@
 
 namespace App\Repositories;
 
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 use App\Models\Invoice;
+use App\Exceptions\InvoiceNotFoundException;
+use Illuminate\Support\Facades\Log;
+
+
 
 class InvoiceRepository
 {
@@ -13,7 +18,10 @@ class InvoiceRepository
 
     public function findByUuid(string $uuid)
     {
-        return Invoice::with('items')->where('uuid', $uuid)->firstOrFail();
+        $invoice = Invoice::with('items')->where('uuid', $uuid)->lockForUpdate()->firstOrFail();
+
+
+        return $invoice;
     }
 
     public function findById(int $id)
@@ -23,7 +31,7 @@ class InvoiceRepository
 
     public function getByUserId(int $userId)
     {
-        return Invoice::with('items')->where('user_id', $userId)->get();
+        return Invoice::with('items')->where('user_id', $userId)->orderBy('claimed_at', 'desc')->orderBy('id', 'desc')->get();
     }
 
     public function update(Invoice $invoice, array $data)

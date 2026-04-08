@@ -25,19 +25,26 @@ return new class extends Migration
                 ->nullable()
                 ->constrained()
                 ->nullOnDelete();
-            $table->string('store_name')->nullable();
             $table->foreignId('branch_id')
                 ->nullable()
                 ->constrained()
                 ->nullOnDelete();
-            $table->timestamp('pos_timestamp')->nullable();
+            $table->foreignId('pos_device_id')
+                ->nullable()
+                ->constrained()
+                ->nullOnDelete();
+
+            $table->boolean('claimed')->default(false);
+            $table->timestamp('claimed_at')->nullable();
+            $table->timestamp('expires_at')->nullable();
+
             $table->decimal('subtotal', 12, 2);
             $table->decimal('tax', 12, 2)->default(0);
             $table->decimal('total', 12, 2);
             $table->string('payment_method')->nullable();
             $table->string('currency', 3)->nullable()->default('EUR');
-            $table->enum('status', ['pending', 'send', 'registered', 'cancelled'])
-                ->default('pending');
+            $table->enum('status', ['created', 'claimed', 'cancelled'])
+                ->default('created');
             $table->timestamps();
         });
     }

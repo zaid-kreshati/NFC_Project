@@ -24,4 +24,9 @@ class Store extends Model
     {
         return $this->hasMany(Invoice::class);
     }
+
+    public function pos_devices(): HasMany
+    {
+        return $this->hasMany(pos_device::class);
+    }
 }

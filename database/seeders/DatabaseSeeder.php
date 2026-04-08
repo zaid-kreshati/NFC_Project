@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RoleSeeder::class);
         $this->call(StoreSeeder::class);
         $this->call(ProductSeeder::class);
+        $this->call(PosDevicesSeeder::class);
         $this->call(InvoiceSeeder::class);
         $this->call(NfcTagSeeder::class);
     }

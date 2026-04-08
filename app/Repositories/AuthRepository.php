@@ -10,15 +10,25 @@ use Illuminate\Support\Facades\Hash;
 class AuthRepository
 {
 
-    public function register(array $data): User
+    public function register(array $data)
     {
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        $token = $user->createToken('auth_token')->plainTextToken;
         $user->assignRole($data['role']);
-        return $user;
+        $response = [
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ],
+            'role' => $data['role'],
+            'token' => $token,
+        ];
+        return $response;
     }
     public function login($request): array
     {
@@ -49,6 +59,6 @@ class AuthRepository
         ];
     }
 
-   
+
 
 }

@@ -14,26 +14,34 @@ class Invoice extends Model
         'external_invoice_id',
         'user_id',
         'store_id',
-        'store_name',
         'branch_id',
+        'pos_device_id',
+        'claimed',
+        'claimed_at',
+        'expires_at',
         'subtotal',
         'tax',
         'total',
         'currency',
         'payment_method',
         'status',
-        'pos_timestamp',
 
     ];
 
     protected $casts = [
-        'pos_timestamp' => 'datetime:Y-m-d H:i:s',
+        'claimed' => 'boolean',
+        'claimed_at' => 'datetime:Y-m-d H:i:s',
+        'expires_at' => 'datetime:Y-m-d H:i:s',
         'created_at' => 'datetime:Y-m-d H:i:s',
         'updated_at' => 'datetime:Y-m-d H:i:s',
     ];
 
 
 
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
     public function store(): BelongsTo
     {
         return $this->belongsTo(Store::class);
@@ -42,6 +50,11 @@ class Invoice extends Model
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
+    }
+
+    public function pos(): BelongsTo
+    {
+        return $this->belongsTo(PosDevice::class);
     }
 
     public function items(): HasMany

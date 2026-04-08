@@ -9,6 +9,9 @@ use App\Models\Store;
 use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+use Carbon\Carbon;
+
+use function Symfony\Component\Clock\now;
 
 class InvoiceSeeder extends Seeder
 {
@@ -40,15 +43,17 @@ class InvoiceSeeder extends Seeder
                 'external_invoice_id' => 'POS-' . str_pad(rand(1, 99999), 5, '0', STR_PAD_LEFT),
                 'user_id' => $user->id,
                 'store_id' => $store->id,
-                'store_name' => $store->name,
-                'branch_id' => rand(1, 5),
+                'branch_id' => rand(1, 2),
+                'pos_device_id' => rand(1, 2),
+                'claimed' => true,
+                'claimed_at' => now(),
+                'expires_at' => Carbon::now()->addDays(7),
                 'subtotal' => $subtotal,
                 'tax' => $tax,
                 'total' => $total,
                 'currency' => 'EUR',
-                'payment_method' => ['Credit Card', 'Cash', 'Debit Card', 'PayPal', 'Bank Transfer'][rand(0, 4)],
-                'status' => ['pending', 'send', 'registered', 'cancelled'][rand(0, 3)],
-                'pos_timestamp' => now()->subDays(rand(0, 365))->subHours(rand(0, 23))->subMinutes(rand(0, 59)),
+                'payment_method' => 'cash',
+                'status' => ['created', 'claimed', 'cancelled'][rand(0, 2)],
             ]);
 
             // Create 1-8 realistic invoice items per invoice

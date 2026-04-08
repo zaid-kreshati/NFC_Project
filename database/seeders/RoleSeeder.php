@@ -16,8 +16,8 @@ class RoleSeeder extends Seeder
     {
         Role::create(['name' => 'customer']);
         Role::create(['name' => 'store_manager']);
-        Role::create(['name' => 'branch_manager']);
         Role::create(['name' => 'admin']);
+        Role::create(['name' => 'pyton_agent']);
 
 
         User::create([

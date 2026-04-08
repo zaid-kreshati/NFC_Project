@@ -7,6 +7,9 @@ use App\Services\InvoiceService;
 use App\Repositories\InvoiceRepository;
 use App\Traits\JsonResponseTrait;
 use App\Http\Requests\InvoiceRequest;
+use App\Exceptions\InvoiceAlreadyClaimedException;
+use App\Exceptions\InvoiceExpiredException;
+
 use Illuminate\Support\Facades\Log;
 
 class InvoiceController extends Controller
@@ -21,7 +24,6 @@ class InvoiceController extends Controller
     // POS create invoice
     public function store(InvoiceRequest $request)
     {
-        Log::info('InvoiceRequest', $request->all());
         $invoice = $this->service->createFromPOS($request->all());
         return $this->success($invoice, 201);
     }
@@ -55,7 +57,7 @@ class InvoiceController extends Controller
             $request->user()->id
         );
 
-        return $this->success($invoice, 201);
+        return $this->success($invoice,'Invoice claimed successfully', 201);
     }
 
     // Update invoice
