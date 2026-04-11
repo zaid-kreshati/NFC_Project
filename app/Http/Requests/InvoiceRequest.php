@@ -17,9 +17,6 @@ class InvoiceRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'store_id' => 'required|exists:stores,id',
-            'branch_id' => 'required|exists:branches,id',
-            'pos_device_id' => 'required|exists:pos_devices,id',
             'invoice_id' => 'required|string|max:255',
             'subtotal' => 'required|numeric|min:0',
             'tax' => 'required|numeric|min:0',

@@ -51,4 +51,11 @@ class User extends Authenticatable
     {
         return $this->hasMany(Invoice::class);
     }
+
+    public function pos_devices()
+    {
+    return $this->hasMany(PosDevice::class, 'created_by');
+    }
+
+
 }

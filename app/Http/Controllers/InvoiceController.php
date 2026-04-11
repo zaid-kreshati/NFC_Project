@@ -24,7 +24,9 @@ class InvoiceController extends Controller
     // POS create invoice
     public function store(InvoiceRequest $request)
     {
-        $invoice = $this->service->createFromPOS($request->all());
+        $pos = $request->attributes->get('pos');
+
+        $invoice = $this->service->createFromPOS($request->all(), $pos);
         return $this->success($invoice, 201);
     }
 
@@ -57,7 +59,7 @@ class InvoiceController extends Controller
             $request->user()->id
         );
 
-        return $this->success($invoice,'Invoice claimed successfully', 201);
+        return $this->success($invoice, 'Invoice claimed successfully', 201);
     }
 
     // Update invoice

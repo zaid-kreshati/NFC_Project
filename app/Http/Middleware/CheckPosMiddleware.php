@@ -6,8 +6,9 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Models\PosDevice;
+use Illuminate\Support\Facades\Log;
 
-class CheckPosAuth
+class CheckPosMiddleware
 {
     /**
      * Handle an incoming request.
@@ -25,18 +26,16 @@ class CheckPosAuth
         }
 
         $pos = PosDevice::where('api_token', $token)
-            ->where('is_active', true)
+            ->where('status', "active")
             ->first();
 
-        if (!$pos || $pos->status !== 'active') {
-            return response()->json(['error' => 'Unauthorized'], 401);
+        if (!$pos ) {
+            return response()->json(['error' => 'Unauthorized2'], 401);
         }
 
-        $request->merge([
-            'pos_device_id' => $pos->id,
-            'branch_id' => $pos->branch_id,
-            'store_id' => $pos->branch->store_id,
-        ]);
+        $request->attributes->set('pos', $pos);
+
+
 
         return $next($request);
     }

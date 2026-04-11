@@ -8,6 +8,9 @@ use Illuminate\Database\Seeder;
 use App\Models\Store;
 use App\Models\Branch;
 use App\Models\PosDevice;
+use App\Models\User;
+
+
 
 class PosDevicesSeeder extends Seeder
 {
@@ -18,13 +21,14 @@ class PosDevicesSeeder extends Seeder
     {
         $stores = Store::all();
         $branches = Branch::all();
+        $users = User::all();
 
         $pos_devices1 = PosDevice::create([
             'name' => fake()->name(),
             'api_token' => fake()->unique()->sha1(),
             'status' => 'active',
-            'store_id' => $stores->random()->id,
             'branch_id' => $branches->random()->id,
+            'created_by' => $users->random()->id,
         ]);
 
 
@@ -33,8 +37,8 @@ class PosDevicesSeeder extends Seeder
             'name' => fake()->name(),
             'api_token' => fake()->unique()->sha1(),
             'status' => 'active',
-            'store_id' => $stores->random()->id,
             'branch_id' => $branches->random()->id,
+            'created_by' => $users->random()->id,
         ]);
     }
 

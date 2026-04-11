@@ -5,13 +5,12 @@ namespace App\Services;
 use App\Models\Invoice;
 use App\Repositories\InvoiceRepository;
 use Illuminate\Support\Str;
-use App\Services\StoreService;
 use Illuminate\Support\Facades\DB;
 use App\Exceptions\InvoiceAlreadyClaimedException;
 use App\Exceptions\InvoiceExpiredException;
+use App\Models\PosDevice;
 use Illuminate\Support\Facades\Log;
 use App\Models\UuidLog;
-use App\Exceptions\InvoiceNotFoundException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
@@ -21,25 +20,25 @@ class InvoiceService
 {
     public function __construct(
         private InvoiceRepository $repo,
-        protected StoreService $StoreService
     ) {}
-    public function createFromPOS(array $data)
+    public function createFromPOS(array $data, PosDevice $pos)
     {
         DB::beginTransaction();
         try {
-            $store = $this->StoreService->findById($data['store_id']);
 
             $existing = Invoice::where('external_invoice_id', $data['invoice_id'])->first();
             if ($existing) {
                 throw new \Exception('الفاتورة موجودة بالفعل، يرجي المحاولة مرة أخرى.بعد تغيير معرف الفاتورة');
             };
 
+            Log::info('createFromPOS', $data);
+
             $invoice = $this->repo->create([
                 'uuid' => Str::uuid()->toString(),
                 'external_invoice_id' => $data['invoice_id'],
-                'store_id' => $store->id,
-                'branch_id' => $data['branch_id'],
-                'pos_device_id' => $data['pos_device_id'],
+                'store_id' => $pos->branch->store_id,
+                'branch_id' => $pos->branch_id,
+                'pos_device_id' => $pos->id,
                 'subtotal' => $data['subtotal'],
                 'tax' => $data['tax'],
                 'total' => $data['total'],
@@ -96,7 +95,7 @@ class InvoiceService
 
             DB::commit();
             return $updated;
-        } catch (NotFoundHttpException| ModelNotFoundException | InvoiceAlreadyClaimedException | InvoiceExpiredException $e) {
+        } catch (NotFoundHttpException | ModelNotFoundException | InvoiceAlreadyClaimedException | InvoiceExpiredException $e) {
             //case5: the invoice does not exist
             DB::rollBack();
             throw $e;

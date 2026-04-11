@@ -10,11 +10,15 @@ class PosDevice extends Model
     protected $table = 'pos_devices';
     protected $fillable = [
         'name',
-        'store_id',
         'branch_id',
         'api_token',
         'status',
+        'created_by'
 
+    ];
+
+    protected $casts = [
+        'created_by' => 'integer',
     ];
 
     public function store(): BelongsTo
@@ -25,5 +29,10 @@ class PosDevice extends Model
     public function branch(): BelongsTo
     {
         return $this->belongsTo(Branch::class);
+    }
+
+    public function creator(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'created_by');
     }
 }

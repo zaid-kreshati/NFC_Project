@@ -20,10 +20,13 @@ class RoleSeeder extends Seeder
         Role::create(['name' => 'pyton_agent']);
 
 
-        User::create([
+        $user1=User::create([
             'name' => 'Admin',
             'email' => 'admin@example.com',
             'password' => bcrypt('password'),
         ]);
+        $user1->assignRole('admin');
+
+
     }
 }

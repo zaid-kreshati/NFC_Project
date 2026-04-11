@@ -14,10 +14,7 @@ return new class extends Migration
         Schema::create('pos_devices', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
-            $table->foreignId('store_id')
-                ->nullable()
-                ->constrained()
-                ->nullOnDelete();
+            $table->foreignId('created_by')->nullable()->constrained('users')->nullOnDelete();
             $table->foreignId('branch_id')->nullable()->constrained()->nullOnDelete();
             $table->string('api_token')->unique();
             $table->enum('status', ['active', 'disabled'])->default('active');
