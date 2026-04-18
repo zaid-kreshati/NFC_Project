@@ -9,7 +9,7 @@ use App\Traits\JsonResponseTrait;
 use App\Http\Requests\InvoiceRequest;
 use App\Exceptions\InvoiceAlreadyClaimedException;
 use App\Exceptions\InvoiceExpiredException;
-
+use Illuminate\Support\Facades\Process;
 use Illuminate\Support\Facades\Log;
 
 class InvoiceController extends Controller
@@ -27,6 +27,35 @@ class InvoiceController extends Controller
         $pos = $request->attributes->get('pos');
 
         $invoice = $this->service->createFromPOS($request->all(), $pos);
+        // $uuid = escapeshellarg($invoice->uuid);
+
+        // exec("python3 scripts/write_nfc.py {$uuid}");
+
+        $uuid = $invoice->uuid; // No need to escapeshellarg here – Process does it automatically
+
+
+        $python = '/Users/STADIA_AD/.pyenv/versions/3.13.0/bin/python3';
+        $script = base_path('scripts/write_nfc.py');
+        exec("$python " . escapeshellarg($script) . " {$uuid}");
+
+
+        // $result = Process::path(base_path())->run([
+        //     'python3',
+        //     'scripts/write_nfc.py',
+        //     $uuid
+        // ]);
+
+        // if ($result->successful()) {
+        //     // NFC write succeeded
+        //     Log::info('NFC write success', ['uuid' => $uuid, 'output' => $result->output()]);
+        // } else {
+        //     // NFC write failed – log error but don't block the invoice creation
+        //     Log::error('NFC write failed', [
+        //         'uuid' => $uuid,
+        //         'error' => $result->errorOutput(),
+        //         'exit_code' => $result->exitCode()
+        //     ]);
+        // }
         return $this->success($invoice, 201);
     }
 

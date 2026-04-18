@@ -47,6 +47,7 @@ The project follows a robust Entity-Relationship Diagram:
 2. **Install Dependencies**
    ```bash
    composer install
+   pip install nfcpy
    ```
 
 3. **Configure Environment**
@@ -64,6 +65,11 @@ The project follows a robust Entity-Relationship Diagram:
 5. **Start the API Server**
    ```bash
    php artisan serve
+   ```
+
+6. **test the nfc write script **
+   ```bash
+   python scripts/write_nfc.py http://127.0.0.1:8000/api/invoices/3b8fdab1-8140-4706-a8a3-d44b0b23c207
    ```
 
 ---

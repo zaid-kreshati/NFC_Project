@@ -27,6 +27,6 @@ class Store extends Model
 
     public function pos_devices(): HasMany
     {
-        return $this->hasMany(pos_device::class);
+        return $this->hasMany(PosDevice::class);
     }
 }
